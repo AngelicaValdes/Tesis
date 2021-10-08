@@ -13,14 +13,12 @@ cat("\nCXXFLAGS += -Wno-ignored-attributes -Wno-deprecated-declarations",
     file = M, sep = "\n", append = TRUE)
 
 #Setear directorio
-setwd("H:/Dropbox/yan shang/delays angelica")
-#setwd("C:/Users/Angie/Dropbox/delays angelica")
 
 library("rstan")
 rstan_options(auto_write = TRUE)
 options(mc.cores = parallel::detectCores())
 
-load('H:/Dropbox/yan shang/delays angelica/mydata_server_14.RData')
+load('/mydata_server_14.RData')
 mod<-stan_model("time.stan")
 for (j in clientes$child_id[(count_clientes+1):(677)]){
   
@@ -180,12 +178,12 @@ for (j in clientes$child_id[(count_clientes+1):(677)]){
   count_clientes<-count_clientes+1
   print("CLIENTE NUMERO:")
   print(count_clientes)
-  unlink('H:/Dropbox/yan shang/delays angelica/mydata_server_14.RData', recursive = TRUE)
-  save.image(file = 'H:/Dropbox/yan shang/delays angelica/mydata_server_14.RData')
+  unlink('/mydata_server_14.RData', recursive = TRUE)
+  save.image(file = '/mydata_server_14.RData')
   rm(list = ls())
   gc()
-  load('H:/Dropbox/yan shang/delays angelica/mydata_server_14.RData')
-  files <- list.files("C:\\Users\\angelica\\AppData\\Local\\Temp\\2", full.names = T, pattern = "Rtmp")
+  load('/mydata_server_14.RData')
+  files <- list.files("\\AppData\\Local\\Temp\\2", full.names = T, pattern = "Rtmp")
   unlink(files, recursive = TRUE)
 }
 
