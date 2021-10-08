@@ -1,5 +1,4 @@
         library(readxl)
-        setwd("C:/Users/Angie/Dropbox/delays angelica")
         load("mydata_server_3.RData")
         BD2 <- read_excel("Datos final.xlsx", sheet = "Datos")
         
@@ -173,13 +172,13 @@
         
         library(writexl)
         #Modelo jerárquico
-        write_xlsx(Base_pronostico_2, "C:/Users/Angie/Dropbox/delays angelica/Base_modelo_15.xlsx")
+        write_xlsx(Base_pronostico_2, "/Base_modelo_15.xlsx")
         save.image("my_base_modelo_9.RData")
         
         #Modelo Independiente
-        #write_xlsx(Base_pronostico_2, "C:/Users/Angie/Dropbox/delays angelica/Base_modelo_14.xlsx")
+        #write_xlsx(Base_pronostico_2, "/Base_modelo_14.xlsx")
         #save.image("my_base_modelo_8.RData")
         
         #Modelo Naive
-        write_xlsx(Base_pronostico_2, "C:/Users/Angie/Dropbox/delays angelica/Base_modelo_13.xlsx")
+        write_xlsx(Base_pronostico_2, "/Base_modelo_13.xlsx")
         save.image("my_base_modelo_7.RData")
