@@ -1,5 +1,3 @@
-setwd("H:/Dropbox/yan shang/delays angelica")
-
 #Cargar base de datos
 library(readxl)
 BD <- read_excel("Datos final.xlsx", sheet = "Datos")
