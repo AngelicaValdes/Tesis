@@ -12,8 +12,6 @@
       cat("\nCXXFLAGS += -Wno-ignored-attributes -Wno-deprecated-declarations", 
           file = M, sep = "\n", append = TRUE)
     }
-    setwd("H:/Dropbox/yan shang/delays angelica")
-    #setwd("C:/Users/Angie/Dropbox/delays angelica")
     library(readxl)
     library(dplyr)
     library("rstan")
@@ -21,7 +19,7 @@
     options(mc.cores = parallel::detectCores())
     
     #guardar los datos de beta, beta_0
-    load("H:/Dropbox/yan shang/delays angelica/modelo_6_5.RData")
+    load("/modelo_6_5.RData")
     beta_0 <- summary(reg_fit2, "beta_0", probs = NULL)$summary
     beta1 <- summary(reg_fit2, "beta1", probs = NULL)$summary
     beta2 <- summary(reg_fit2, "beta2", probs = NULL)$summary
@@ -128,4 +126,4 @@
     }
     
     library(writexl)
-    write_xlsx(efecto, "H:/Dropbox/yan shang/delays angelica/jerarquico_theta_tau_desv_theta.xlsx")
+    write_xlsx(efecto, "/jerarquico_theta_tau_desv_theta.xlsx")
