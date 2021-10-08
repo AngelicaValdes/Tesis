@@ -14,8 +14,7 @@
         }
         
         #Setear directorio
-        setwd("H:/Dropbox/yan shang/delays angelica")
-        #setwd("C:/Users/Angie/Dropbox/delays angelica")
+     
         library(dplyr)
         library("rstan")
         rstan_options(auto_write = TRUE)
